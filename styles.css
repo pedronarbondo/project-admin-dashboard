@@ -138,6 +138,8 @@ li a:hover:before {
      background-color: lightgrey;
      width: clamp(80px, 70%, 80%);
      height: 25px;
+     padding-left: 20px;
+     border: none;
  }
 .search-bar img {
     position: relative;
@@ -197,6 +199,13 @@ li a:hover:before {
     cursor: pointer;
 }
 
+.buttons button:hover {
+    background-color: orange;
+    transition: 0.4s;
+}
+.buttons button:active {
+    background-color: #cc8500;
+}
 .buttons {
     position: relative;
     left: 100px;
@@ -206,3 +215,4 @@ li a:hover:before {
     display: flex;
     gap: 30px;
 }
+
