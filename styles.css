@@ -77,11 +77,23 @@ a {
     margin-top: 11px;
 }
 
-li {
-    width: min-content;
+.nav-list li a,
+.nav-settings li a {
+    position: relative;
 }
-li:hover {
-    text-shadow: 1px solid black;
-    border-bottom: 3px solid black;
-    transition: 1s;
-}
+.nav-list li a:before,
+.nav-settings li a:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #FFF;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+  }
+li a:hover:before {
+   visibility: visible;
+   width: 100%;
+ }
