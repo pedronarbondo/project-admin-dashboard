@@ -1,5 +1,10 @@
+@font-face {
+    font-family: Roboto;
+    src: url(../project-admin-dashboard/fonts/Roboto-Black.ttf)
+}
+
 body {
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Roboto, Tahoma, Geneva, Verdana, sans-serif;
     background-color: #eef2ff;
     padding: 0;
     margin: 0;
@@ -12,8 +17,9 @@ a {
 .grid-container {
     display: grid;
     height: 100vh;
-    grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1fr 4fr;
+    grid-template-columns: minmax(300px, 1fr) minmax(1200px, 4fr);
+    grid-template-rows: minmax(200px, 1fr) minmax(1200px, 4fr);
+    overflow: hidden;
 }
 
 .sidebar {
@@ -31,10 +37,15 @@ a {
 }
 
 .sidebar img {
+    position: relative;
+    bottom: 30px;
     grid-column: 1/2;
     grid-row: 1/2;
 }
 .sidebar h3 {
+    position: relative;
+    bottom: 30px;
+    align-self: start;
     grid-column: 2/3;
     grid-row: 1/2;
 }
@@ -80,6 +91,7 @@ a {
 .nav-list li a,
 .nav-settings li a {
     position: relative;
+    bottom: 27px;
 }
 .nav-list li a:before,
 .nav-settings li a:before {
@@ -97,3 +109,100 @@ li a:hover:before {
    visibility: visible;
    width: 100%;
  }
+
+
+ .header {
+     height: 25vh;
+     display: grid;;
+     grid-template-columns: minmax(400px, 3fr) minmax(250px, 2fr);
+     grid-template-rows: minmax(80px, 1fr) minmax(150px, 1.5fr);
+     background-color: white;
+     color: black;
+     grid-column: 2/-1;
+     grid-row: 1/2;
+     box-shadow: 0px 1px 3px black;
+ }
+
+ .search-bar {
+     position: relative;
+     top: 20px;
+     left: 50px;
+     grid-column: 1/2;
+     grid-row: 1/2;
+     align-self: center;
+     display: flex;
+     flex-direction: row;
+ }
+ .searchbox {
+     border-radius: 12px;
+     background-color: lightgrey;
+     width: clamp(80px, 70%, 80%);
+     height: 25px;
+ }
+.search-bar img {
+    position: relative;
+    bottom: 4px;
+}
+
+.welcome {
+    position: relative;
+    left: 50px;
+    align-self: center;
+    grid-column: 1/2;
+    grid-row: 2/3;
+
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+
+.welcome img {
+    width: 80px;
+    height: 80px;
+    position: relative;
+    top: 5px;
+}
+.welcome-text h4 {
+    margin-bottom: -6x;
+}
+.user-info img:nth-child(1) {
+    height: 36px;
+    width: 36px;
+}
+.user-info a:nth-child(2)>img {
+    width: 50px;
+    height: 50px;
+}
+
+.user-info {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 100px;
+    position: relative;
+    top: 20px;
+}
+.buttons button {
+    border-radius: 15px;
+    background-color: #818cf8;
+    height: 40px;
+    width: 120px;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+.buttons {
+    position: relative;
+    left: 100px;
+    grid-row: 2/3;
+    grid-column: 2/3;
+    align-self: center;
+    display: flex;
+    gap: 30px;
+}
