@@ -259,6 +259,7 @@ li a:hover:before {
 }
 .article:hover {
     transform: scale(1.04);
+    background-color: #ffe6ff;
 }
 .article a {
     position: absolute;
