@@ -23,6 +23,9 @@ a {
 }
 
 .sidebar {
+    position: fixed;
+    width: max(220px, 14%);
+    height: 100%;
     background-color: #818cf8;
     grid-column: 1 / 2;
     grid-row: 1 / -1;
@@ -63,6 +66,10 @@ a {
     grid-column: 2/3;
 }
 
+.nav-settings {
+    position: absolute;
+    bottom: 15px;
+}
 .nav-list,
 .nav-settings,
 .nav-list-img,
@@ -80,7 +87,8 @@ a {
 .nav-list-settings-img {
     grid-row: 3/4;
     grid-column: 1/2;
-    margin-top: 35px;
+    position: absolute;
+    bottom: 4px;
 }
 .nav-list-img>li,
 .nav-list-settings-img>li {
@@ -179,8 +187,8 @@ li a:hover:before {
     grid-column: 2/3;
     grid-row: 1/2;
     display: flex;
-    gap: 50px;
     align-items: center;
+    gap: 50px;
     justify-content: flex-end;
     padding-right: 100px;
     position: relative;
