@@ -3,12 +3,11 @@
     src: url(../project-admin-dashboard/fonts/Roboto-Black.ttf)
 }
 
-body {
+html, body {
     font-family: Roboto, Tahoma, Geneva, Verdana, sans-serif;
     background-color: #eef2ff;
     padding: 0;
     margin: 0;
-    overflow-x: hidden;
     height: 100vh;
 }
 
@@ -222,11 +221,13 @@ li a:hover:before {
     grid-row: 2/-1;
     grid-column: 2/-1;
     display: grid;
-    grid-template-columns: minmax(400px, 2fr) minmax(250px, 0.5fr);
-    grid-template-rows: minmax(50px, 60px) minmax(200px, 300px) minmax(50px, 80px) minmax(200px, 300px);
-    margin-top: 50px;
-    padding-left: 40px;
+    grid-template-columns: minmax(400px, 80%) minmax(300px, 20%);
+    grid-template-rows: minmax(50px, 60px) minmax(300px, 10%) minmax(80px, 8%) minmax(300px, 40%);
+    padding-top: 50px;
+    padding-left: 30px;
     color: #4d4d4d;
+
+
 }
 
 .projects {
@@ -238,17 +239,20 @@ li a:hover:before {
 .announcements {
     grid-row: 1/2;
     grid-column: 2/3;
+    text-align: center;
 }
 .articles {
     grid-row: 2/-1;
     grid-column: 1/2;
     display: flex;
     flex-flow: wrap;
-    gap: 50px;
+    align-content: flex-start;
+    gap: 40px;
+    height: 100%;
 }
 .article {
     width: 350px;
-    height: 250px;
+    height: max(15%, 280px);
     background-color: white;
     border-left: 8px solid purple;
     border-radius: 10px;
@@ -277,4 +281,46 @@ li a:hover:before {
     right: 10px;
     font-style: italic;
     font-size: 0.8rem;
+}
+
+h2,
+h4 {
+    color: black;
+}
+h3 {
+    font-size: 1.6rem;
+    position: relative;
+    bottom: 10px;
+}
+.announcement-div {
+    padding: 6px 25px;
+    border-radius: 12px;
+    grid-row: 2/4;
+    box-shadow: 0px 0px 10px black;
+    background-color: #cfd3fc;
+    line-height: 1.6rem;
+    color: #4d4d4d;
+}
+.announcement-div h4 {
+    margin-bottom: -10px;
+}
+.announcement-div p {
+    font-size: 0.8rem;
+}
+.trending {
+    grid-row: 4/-1;
+    grid-column: 2/3;
+    text-align: center;
+}
+.trending-div {
+    margin-top: 55px;
+    height: fit-content;
+    grid-row: 4/-1;
+    grid-column: 2/3;
+    background-color: #cfd3fc;
+    padding: 6px 25px;
+    border-radius: 12px;   
+    box-shadow: 0px 0px 10px black;
+    line-height: 1.6rem;
+    color: #4d4d4d;
 }
