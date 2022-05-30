@@ -9,7 +9,6 @@ body {
     padding: 0;
     margin: 0;
     overflow-x: hidden;
-    overflow-y: hidden;
     height: 100vh;
 }
 
@@ -20,7 +19,7 @@ a {
 .grid-container {
     display: grid;
     grid-template-columns: minmax(250px, 15%) minmax(800px, 85%);
-    grid-template-rows: minmax(200px, 15%) minmax(1200px, 85%);
+    grid-template-rows: minmax(250px, 15%) minmax(1200px, 85%);
     height: 100%;
 }
 
@@ -113,9 +112,9 @@ li a:hover:before {
 
 
  .header {
-     height: 25vh;
+     height: 100%;
      display: grid;;
-     grid-template-columns: minmax(400px, 3fr) minmax(250px, 2fr);
+     grid-template-columns: minmax(400px, 60%) minmax(250px, 40%);
      grid-template-rows: minmax(80px, 1fr) minmax(150px, 1.5fr);
      background-color: white;
      color: #4d4d4d;
@@ -208,21 +207,24 @@ li a:hover:before {
     background-color: #cc8500;
 }
 .buttons {
-    position: relative;
-    left: 100px;
+
     grid-row: 2/3;
     grid-column: 2/3;
     align-self: center;
+    justify-self: flex-end;
+    margin-right: 30px;
     display: flex;
+    flex-wrap: wrap;
     gap: 30px;
 }
 
 .main {
+    grid-row: 2/-1;
+    grid-column: 2/-1;
     display: grid;
     grid-template-columns: minmax(400px, 2fr) minmax(250px, 0.5fr);
     grid-template-rows: minmax(50px, 60px) minmax(200px, 300px) minmax(50px, 80px) minmax(200px, 300px);
-    position: relative;
-    top: 53px;
+    margin-top: 50px;
     padding-left: 40px;
     color: #4d4d4d;
 }
